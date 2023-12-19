@@ -1,4 +1,11 @@
 trigger:
+- task: Docker@2
+  inputs:
+    containerRegistry: 'Docker Hub'
+    repository: 'damigah/celebrities'
+    command: 'buildAndPush'
+    Dockerfile: '**/Dockerfile'
+    tags: 'docker pull damigah/celebrities:latest'
 - main
 
 pool:
