@@ -1,11 +1,4 @@
 trigger:
-- task: Docker@2
-  inputs:
-    containerRegistry: 'Docker Hub'
-    repository: 'damigah/celebrities'
-    command: 'buildAndPush'
-    Dockerfile: '**/Dockerfile'
-    tags: 'docker pull damigah/celebrities:latest'
 - main
 
 pool:
@@ -16,10 +9,10 @@ steps:
 - task: Docker@2
   inputs:
     containerRegistry: 'Docker Hub'
-    repository: 'damigah/nginx-app'
+    repository: 'damigah/celebrities'
     command: 'buildAndPush'
     Dockerfile: '**/Dockerfile'
-    tags: 'docker pull Docker damigah/nginx-app:latest'
+    tags: 'docker pull damigah/celebrities:latest'
 
 - script: |
     echo Add other tasks to build, test, and deploy your project.
