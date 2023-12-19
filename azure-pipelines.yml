@@ -12,7 +12,7 @@ steps:
     repository: 'damigah/celebrities'
     command: 'buildAndPush'
     Dockerfile: '**/Dockerfile'
-    tags: 'docker pull damigah/celebrities:latest'
+    tags: 'latest'
 
 - script: |
     echo Add other tasks to build, test, and deploy your project.
