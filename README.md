@@ -1,2 +1,2 @@
 # DevOps-Project
-The specialisation project with AiCore
+A practical project with AiCore
